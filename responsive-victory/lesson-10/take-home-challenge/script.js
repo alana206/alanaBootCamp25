@@ -12,7 +12,6 @@ async function getPokemon() {
         return;
     }
 
-    // Sanitize the input
     const pokemon = pokemonInput.toLowerCase().trim();
     const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
     
@@ -25,6 +24,13 @@ async function getPokemon() {
         
         // Parse the JSON response
         const data = await response.json();
+            console.log(data);
+           // console.log(data.stats[0].stat.name);
+            console.log(data.moves[0].version_group_details[0].move_learn_method.name);
+
+
+
+
         
         // Display the result
         alert(`Found Pokemon: ${data.name.toUpperCase()}!`);

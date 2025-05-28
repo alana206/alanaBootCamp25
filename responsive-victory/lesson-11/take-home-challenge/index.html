@@ -1,1 +1,20 @@
-s
+<button id="pokeButton">Click me to see me</button>
+<div id="pokemonName"></div>
+
+<script>
+  document.getElementById('pokeButton').addEventListener('click', async function () {
+    const res = await fetch('https://pokeapi.co/api/v2/pokemon/1');
+    const data = await res.json();
+    const h1 = document.createElement('h1');
+    h1.textContent = data.name;
+    document.getElementById('pokemonName').appendChild(h1);
+  });
+</script>
+<button id="changeText">Click me!</button>
+<div id="output"></div>
+
+<script>
+  document.getElementById('changeText').addEventListener('click', function () {
+    document.getElementById('output').textContent = 'Button was clicked!';
+  });
+</script>

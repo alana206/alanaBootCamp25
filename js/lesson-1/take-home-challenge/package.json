@@ -1,0 +1,14 @@
+{
+  "name": "take-home-challenge",
+  "version": "1.0.0",
+  "description": "Take home challenge for bootcamp project",
+  "license": "ISC",
+  "author": "Alana",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "dev": "nodemon index.js"
+  }
+}
